@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/account_page.css">
+</head>
+<body>
+    <div class="container">
+        <!-- left side start form here -->
+        <div class="navigation">        
+            <ul>
+                <li>
+                    <a href="./home_page.html">
+                        <span class="icon headIcon"><img src="../img/Logo-Rikkei.png" alt="" width="90%"></span>
+                        <span class="title headText">để nông dân biết code</span>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="./home_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./course_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý khóa học</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./class_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý lớp học</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./student_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý sinh viên</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./account_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý tài khoản</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" signOutBtn>
+                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="title">Đăng xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- left side end here -->
+        <div class="main">
+               <div class="upContent">
+                <div>hệ thông quản lý sinh viên rikkei</div>
+               </div>
+               <div class="centerContent">
+                    <div>Welcome</div><div class="centerText" centerText></div>
+               </div>
+               <div class="downContent">
+                    <div class="signOut hide" signOutBox>
+                        <button class="btn" btnNo01>X</button>
+                        <div class="signOutText">
+                            <div>Xác nhận đăng xuất</div>
+                            <div>Bạn có muốn đăng xuất không</div>
+                            <div class="btnConfirm">
+                                <button class="btnYn" btnYes>Có</button>
+                                <button class="btnYn no" btnNo02>Không</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="textContent" imformationText>
+                        <div class="content01">
+                            <div>Quản lý tài khoản</div>
+                        </div>
+                        <div class="content02">
+                            <div style="display: none;"><button addBtn>Thêm mới</button></div>
+                            <div><input type="search" name="search" placeholder="Nhập từ khóa tìm kiếm" search-text></div>
+                            <div><select selectInput>
+                                <option value="5"selected="selected">Xắp xếp</option>
+                                <option value="0">A-Z</option>
+                                <option value="1">Z-A</option>
+                                <option value="3">0-9</option>
+                                <option value="4">9-0</option>
+                            </select></div>
+                        </div>
+                        <div class="content03">
+                            <table id="tableId">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Email</th>
+                                        <th>Mật khẩu</th>
+                                        <th>Họ và Tên</th>
+                                        <th>Trạng thái</th>
+                                        <th colspan="2">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody account-list>
+                                
+                                </tbody>
+                                <template data-users-template>
+                                    <tr data-header>
+                                        <td data-stt style="text-align: center;"></td>
+                                        <td data-email></td>
+                                        <td data-password style="text-align: center;"></td>
+                                        <td data-name style="text-align: center;"></td>
+                                        <td data-status></td>
+                                        <td data-Work01 class="editBtn" style="cursor: pointer;"><i class="fa-solid fa-lock" style="font-size: 1.5em;color:red;" title="Khóa"></i></td>
+                                        <td data-Work02 class="deleteBtn" style="cursor: pointer;"><i class="fa-solid fa-unlock" style="font-size: 1.5em;color: green;" title="Mở khóa"></i></td>
+                                    </tr>
+                                </template>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <a href="javascript:;" prevData>Prev</a>
+                            <span pagination></span>   
+                            <template template-data-list>
+                                <a href="javascript:;" aData></a>
+                            </template>
+                            <a href="javascript:;" nextData>Next</a>
+                        </div>
+                     </div>
+                    <div class="addBox" addBox style="display: none;">
+                        <div class="addBoxUp">
+                            <span addBoxUpText>Quản lý khóa học-thêm mới khóa học</span>
+                            <button addBoxOutBtn>X</button>
+                        </div>
+                        <div class="addBoxCenter">
+                            
+                        </div>
+                        <div class="addBoxDown">
+                            <button  class="btnAdd" btnAdd>Thêm mới</button>
+                            <button style ='display: "none";' class="btnAdd" btnEdit>Thay đổi</button>
+                            <button style ='display: "none";' class="btnAdd" btnDelete>Xóa</button>
+                            <button class="btnClose" btnClose>Đóng</button>
+                        </div>
+                    </div>
+               </div>
+        </div>
+    </div>
+    
+
+
+    <script src="../js/home.js"></script>
+    <script src="../js/account_page.js"></script>
+</body>
+</html>

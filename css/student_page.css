@@ -1,0 +1,182 @@
+.main .downContent .textContent{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.main .downContent .textContent .content01{
+    position: relative;
+    width: 95%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.main .downContent .textContent .content02{
+    width: 95%;
+    height: 8%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .downContent .textContent .content02 button{
+    padding: 10px;
+    background-color: greenyellow;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.main .downContent .textContent .content02 input[name="search"]{
+    padding: 4px;
+    width: 400px;
+}
+.main .downContent .textContent .content02 select[name="select"]{
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.main .downContent .textContent .content03 table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.0em;
+    min-width: 1500px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.main .downContent .textContent .content03 table thead tr{
+    background-color: #009879;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+.main .downContent .textContent .content03 table th,
+.main .downContent .textContent .content03 table td{
+    padding: 15px 12px;
+}
+.main .downContent .textContent .content03 table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+.main .downContent .textContent .content03 table tbody tr:nth-of-type(even){
+    background: #f3f3f3;
+}
+.main .downContent .textContent .content03 table tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+.pagination a {
+    margin-top: 10px;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.main .downContent .addBox{
+    position: relative;
+    width: 800px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.main .downContent .addBox .addBoxUp{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .downContent .addBox .addBoxUp button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.main .downContent .addBox .addBoxUp button:hover{
+    background: #F73D56;
+}
+.main .downContent .addBox .addBoxUp span{
+    font-size: 20px;
+}
+.main .downContent .addBox .addBoxCenter{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+.main .downContent .addBox .addBoxCenter .text{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+.main .downContent .addBox .addBoxCenter .text .inputText{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.main .downContent .addBox .addBoxCenter .text .inputBox{
+    position: relative;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.main .downContent .addBox .addBoxCenter .text .inputText label{
+    position: relative;
+    left: 50px;
+}
+.main .downContent .addBox .addBoxCenter .text .inputBox input{
+    width: 500px;
+    padding: 5px;
+}
+.main .downContent .addBox .addBoxCenter .text .selectBox{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main .downContent .addBox .addBoxDown{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .downContent .addBox .addBoxDown button{
+    padding: 10px 20px;
+    border: 1px solid #000;
+    outline: none;
+    transition: 0.5s;
+}
+.main .downContent .addBox .addBoxDown .btnAdd:hover{
+    background: #23C6DF;
+    border-color: #23C6DF;
+}
+.main .downContent .addBox .addBoxDown .btnClose:hover{
+    background: #F73D56;
+    border-color: #F73D56;   
+}

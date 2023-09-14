@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/class_page.css">
+</head>
+<body>
+    <div class="container">
+        <!-- left side start form here -->
+        <div class="navigation">        
+            <ul>
+                <li>
+                    <a href="./home_page.html">
+                        <span class="icon headIcon"><img src="../img/Logo-Rikkei.png" alt="" width="90%"></span>
+                        <span class="title headText">để nông dân biết code</span>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="./home_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./course_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý khóa học</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./class_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý lớp học</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./student_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý sinh viên</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./account_page.html">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Quản lý tài khoản</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" signOutBtn>
+                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="title">Đăng xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- left side end here -->
+        <div class="main">
+               <div class="upContent">
+                <div>hệ thông quản lý sinh viên rikkei</div>
+               </div>
+               <div class="centerContent">
+                    <div>Welcome</div><div class="centerText" centerText></div>
+               </div>
+               <div class="downContent">
+                    <div class="signOut hide" signOutBox>
+                        <button class="btn" btnNo01>X</button>
+                        <div class="signOutText">
+                            <div>Xác nhận đăng xuất</div>
+                            <div>Bạn có muốn đăng xuất không</div>
+                            <div class="btnConfirm">
+                                <button class="btnYn" btnYes>Có</button>
+                                <button class="btnYn no" btnNo02>Không</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="textContent" imformationText>
+                        <div class="content01">
+                            <div>Quản lý lớp học</div>
+                        </div>
+                        <div class="content02">
+                            <div><button addBtn>Thêm mới</button></div>
+                            <div><input type="search" name="search" placeholder="Nhập từ khóa tìm kiếm" search-text></div>
+                            <div><select selectInput>
+                                <option value="5"selected="selected">Xắp xếp</option>
+                                <option value="0">A-Z</option>
+                                <option value="1">Z-A</option>
+                                <option value="3">0-9</option>
+                                <option value="4">9-0</option>
+                            </select></div>
+                        </div>
+                        <div class="content03">
+                            <table id="tableId">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Mã lớp</th>
+                                        <th>Tên lớp</th>
+                                        <th>giảng viên</th>
+                                        <th>Mô tả</th>
+                                        <th>Sĩ số</th>
+                                        <th>Trạng thái</th>
+                                        <th colspan="2">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody class-list>
+                                
+                                </tbody>
+                                <template data-users-template>
+                                    <tr data-header>
+                                        <td data-Stt></td>
+                                        <td data-Id></td>
+                                        <td data-Name></td>
+                                        <td data-teacher></td>
+                                        <td data-describer></td>
+                                        <td data-tolat></td>
+                                        <td data-Status></td>
+                                        <td data-Work01 class="editBtn" style="cursor: pointer;"><i class="fa-regular fa-pen-to-square" style="font-size: 1.5em;color: green;" title="Sửa"></i></td>
+                                        <td data-Work02 class="deleteBtn" style="cursor: pointer;"><i class="fa-solid fa-trash-can" style="font-size: 1.5em;color: red;" title="Xóa"></i></td>
+                                    </tr>
+                                </template>
+                            </table>
+                        </div>   
+                        <div class="pagination">
+                            <a href="javascript:;" prevData>Prev</a>
+                            <span pagination></span>   
+                            <template template-data-list>
+                                <a href="javascript:;" aData></a>
+                            </template>
+                            <a href="javascript:;" nextData>Next</a>
+                        </div>
+                    </div>
+                    <div class="addBox" addBox style="display: none;">
+                        <div class="addBoxUp">
+                            <span addBoxUpText>Quản lý khóa học-thêm mới khóa học</span>
+                            <button addBoxOutBtn>X</button>
+                        </div>
+                        <div class="addBoxCenter">
+                            <div class="text">
+                                <div class="inputText"><label>Mã khóa học<span style="color: red;">(*)</span></label></div>
+                                <div class="selectBox">
+                                    <select courseId>
+                                        
+                                    </select>
+                                </div>
+                                <template template-courseId-list>
+                                    <option value="" courseId-value></option>
+                                </template>
+                            </div>
+                            <div class="text">
+                                <div class="inputText"><label>Mã lớp học<span style="color: red;">(*)</span></label></div>
+                                <div class="inputBox"><input type="text" placeholder="Nhập mã lớp học" classId></div>
+                            </div>
+                            <div class="text">
+                                <div class="inputText"><label>Tên lớp học<span style="color: red;">(*)</span></label></div>
+                                <div class="inputBox"><input type="text" placeholder="Nhập tên lớp học" className></div>
+                            </div>
+                            <div class="text">
+                                <div class="inputText"><label>Giảng viên<span style="color: red;">(*)</span></label></div>
+                                <div class="inputBox"><input type="text" placeholder="Nhập tên giảng viên" lecturer></div>
+                            </div>
+                            <div class="text">
+                                <div class="inputText"><label>Sĩ số<span style="color: red;">(*)</span></label></div>
+                                <div class="inputBox"><input type="text" placeholder="Nhập sĩ số" totalNumber></div>
+                            </div>
+                            <div class="text">
+                                <div class="inputText"><label>Mô tả<span style="color: red;">(*)</span></label></div>
+                                <div class="inputBox"><input type="text" placeholder="Nhập mô tả khóa học" description></div>
+                            </div>
+                            <div class="text">
+                                <div class="inputText"><label>Trạng thái</label></div>
+                                <div class="selectBox">
+                                    <div>
+                                        <select classStatus>
+                                            <option value="Hoạt động" selected="selected">Hoạt động</option>
+                                            <option value="Két thúc">Kết thúc</option>
+                                            <option value="Đang chờ">Đang chờ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addBoxDown">
+                            <button  class="btnAdd" btnAdd>Thêm mới</button>
+                            <button style ='display: "none";' class="btnAdd" btnEdit>Thay đổi</button>
+                            <button style ='display: "none";' class="btnAdd" btnDelete>Xóa</button>
+                            <button class="btnClose" btnClose>Đóng</button>
+                        </div>
+                    </div>
+               </div>
+        </div>
+    </div>
+    
+
+
+    <script src="../js/home.js"></script>
+    <script src="../js/class_page.js"></script>
+</body>
+</html>

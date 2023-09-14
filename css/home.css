@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,900;1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation > ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.naviagtion > ul > li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation > ul > li:hover{
+    background: #03a9f4;
+}
+.navigation > ul > li:nth-child(1){
+    margin-bottom: 20px;
+}
+.navigation > ul > li:nth-child(1):hover{
+    background: transparent;
+}
+.navigation > ul > li > a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation > ul > li > a >.icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+}
+.nagivation > ul > li > a > .icon .fa{
+    color: #fff;
+}
+.title{
+    line-height: 60px;
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    white-space: nowrap;
+}
+.headText{
+    text-transform: uppercase;
+    position: relative;
+    padding-top: 4px;
+}
+img{
+   position: relative;
+   padding-top: 10px;
+}
+/* left side end here */
+
+.main{
+    position: absolute;
+    width: calc(100%-300px);
+    left: 300px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+.main .upContent{
+    position: relative;
+    width: 1572px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    background: #003147;
+    font-size: 30px;
+    word-spacing: 5px;
+    
+}
+.main .centerContent{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #818080;
+    color: #fff;
+}
+.main .centerContent .centerText{
+    padding-left: 10px;
+}  
+.main .downContent{
+        position: relative;
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.main .downContent .signOut{
+    position: relative;
+    /* background: #03a9f4; */
+    width: 700px;
+    height: 300px;   
+}
+.main .downContent .signOut .signOutText{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    border: 1px solid #000;
+    background-color: #65b2d8;
+}
+.main .downContent .signOut .signOutText .btnComfirm{
+    display: flex;
+    flex-direction: row;
+}
+.btnYn{
+    padding: 10px 20px;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+}
+.btnYn:hover{
+    background-color: #40F373;
+}
+.btnYn.no:hover{
+    background: #F73D56;
+}
+.main .downContent .signOut .btn{
+    position: absolute;
+    right: 0;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+.main .downContent .signOut .btn:hover{
+    background: #F73D56;
+}
+.hide{
+    display: none;
+}
+/* up side end here */
